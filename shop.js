@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
                 if (response.success) {
                     alert('Added to cart!');
                     var cartCount = Object.values(response.data).reduce((a, b) => a + b, 0);
-                    $('.menu-item a:contains("Cart")').text('🛒 Cart (' + cartCount + ')');
+                    $('.cart-count').text(cartCount);
                 } else {
                     alert('Failed to add to cart.');
                 }
